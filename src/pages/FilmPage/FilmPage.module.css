@@ -1,0 +1,108 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.overlay .spinner {
+  width: 60px;
+  height: 60px;
+  border: 8px solid var(--foreground);
+  border-top: 8px solid var(--color-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.filmContent {
+  margin-bottom: 2em;
+}
+.filmContent img.img {
+  object-fit: contain;
+  max-width: 20%;
+  height: auto;
+  max-height: 300px;
+  border-radius: 20px;
+}
+.filmHeader {
+  display: flex;
+  gap: 10px;
+}
+.filmSlogan {
+  margin: auto;
+  font-size: 2em;
+  font-weight: 700;
+  text-align: center;
+}
+.filmBlock {
+  position: relative;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4em;
+}
+.filmBlock__title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.filmTitle {
+  font-size: 2em;
+  margin: 0;
+}
+.filmElement {
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+}
+.filmElement a {
+  opacity: .5;
+  transition: .3s;
+}
+.filmElement a:hover, .filmElement a:active, .filmElement a:focus-visible {
+  opacity: 1;
+}
+.filmElement__subtitle {
+  font-size: 1.3em;
+  margin-bottom: .7em;
+}
+.filmElementSvg {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+}
+.filmElementSvg svg {
+  fill: var(--foreground);
+  width: 1em;
+}
+@media (max-width:768px) {
+  .filmHeader {
+    flex-direction: column;
+    align-items: center;
+  }
+  .filmContent img.poster {
+    max-height: 200px;
+  }
+  .filmContent img.img {
+    max-width: 35%;
+  }
+}
+@media (max-width:460px) {
+  .filmContent img.img {
+    max-width: 80%;
+  }
+}
+@media (max-width:360px) {
+  .filmBlock {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,36 @@
+.block {
+  padding: 1em 2em;
+  border: 1px solid var(--background-secondary);
+}
+.collapsible {
+  transition: .3s linear;
+}
+.collapsible summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  list-style: none;
+}
+.collapsible summary::-webkit-details-marker {
+  display: none;
+}
+.arrow {
+  transition: .3s ease;
+}
+details[open] .arrow {
+  transform: rotate(180deg);
+}
+.content {
+  margin-top: 1em;
+  transition: .3s ease;
+  max-height: 0;
+  overflow: hidden;
+}
+.content:has(input[type="checkbox"]) {
+  overflow-y: auto;
+}
+details[open] + div.content {
+  max-height: 10em;
+  transition: .3s linear;
+}
