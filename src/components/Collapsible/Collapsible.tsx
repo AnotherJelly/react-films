@@ -1,6 +1,7 @@
+import { memo } from "react";
 import style from "./Collapsible.module.css";
 
-export function Collapsible({ title, children }: { title: string; children: React.ReactNode }) {
+function CollapsibleComponent({ title, children }: { title: string; children: React.ReactNode }) {
 
   return (
     <div className={style.block}>
@@ -23,3 +24,5 @@ export function Collapsible({ title, children }: { title: string; children: Reac
     </div>
   );
 }
+
+export const Collapsible = memo(CollapsibleComponent);

@@ -3,8 +3,9 @@ import { Collapsible } from '../Collapsible/Collapsible';
 import { InputRange } from '../InputRange/InputRange';
 import { DEFAULT_VALUES } from '../../constants/searchParams';
 import { useSortingPanelLogic } from './useSortingPanelLogic';
+import { memo } from 'react';
 
-export function SortingPanel({
+function SortingPanelComponent({
   genres, selectedGenres, ratingFrom, ratingTo, yearFrom, yearTo
 }: {
   genres: string[]; selectedGenres: string[]; ratingFrom: number; ratingTo: number; yearFrom: number; yearTo: number;
@@ -65,3 +66,5 @@ export function SortingPanel({
     </div>
   );
 }
+
+export const SortingPanel = memo(SortingPanelComponent);

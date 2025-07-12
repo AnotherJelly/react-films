@@ -1,9 +1,10 @@
+import { memo } from "react";
 import { Link } from "react-router-dom";
 import { Film } from "../../types/film";
 import { ButtonFavorite } from "../ButtonFavorite/ButtonFavorite";
 import style from './FilmCard.module.css';
 
-export function FilmCard(film: Film) {
+function FilmCardComponent({ film }: {film: Film}) {
   return (
     <div className="card">
       <div className={style.cardFavorite}>
@@ -21,3 +22,5 @@ export function FilmCard(film: Film) {
     </div>
   );
 }
+
+export const FilmCard = memo(FilmCardComponent);

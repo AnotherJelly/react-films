@@ -5,7 +5,7 @@ export function FilmList({ films }: { films: Film[] }) {
   return (
     <>
       {films.map((film) => (
-        <FilmCard key={film.id} {...film} />
+        <FilmCard key={film.id} film={film} />
       ))}
     </>
   );
