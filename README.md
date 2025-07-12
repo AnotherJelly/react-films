@@ -9,8 +9,6 @@ cd react-films
 
 ```bash
 npm install
-# or
-yarn
 ```
 
 ### 3. Запустите приложение в режиме разработки
