@@ -1,0 +1,25 @@
+.filmElement__row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: .5em;
+}
+.filmElement__row .filmElementSvg {
+  min-width: 30%;
+  opacity: .5;
+}
+.filmElementSvg {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+}
+.filmElementSvg svg {
+  fill: var(--foreground);
+  width: 1em;
+}
+@media (max-width:768px) {
+  .filmElement__row {
+    flex-direction: column;
+  }
+}
