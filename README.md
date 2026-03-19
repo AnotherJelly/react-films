@@ -1,3 +1,6 @@
+# react-films
+github pages link: https://anotherjelly.github.io/react-films/
+
 ### 1. Клонируйте репозиторий
 
 ```bash
